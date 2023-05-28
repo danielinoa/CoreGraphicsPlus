@@ -1,3 +1,3 @@
 # CoreGraphicsPlus
 
-A description of this package.
+A collection of supplemental CoreGraphics extensions and utilities.
