@@ -132,7 +132,8 @@ extension CGRect {
 
     // MARK: - Initializers
 
-    init(size: CGSize) {
+    /// A CGRect at the `.zero` origin with the specified `size`.
+    public init(size: CGSize) {
         self = .init(origin: .zero, size: size)
     }
 }
