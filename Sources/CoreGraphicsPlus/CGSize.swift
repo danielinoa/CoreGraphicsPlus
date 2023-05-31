@@ -4,14 +4,9 @@
 
 import CoreGraphics
 
-extension CGSize: Hashable {
+public extension CGSize {
 
-    public static func square(_ length: CGFloat) -> CGSize {
+    static func square(_ length: CGFloat) -> CGSize {
         .init(width: length, height: length)
-    }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(width)
-        hasher.combine(height)
     }
 }

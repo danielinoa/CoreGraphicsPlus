@@ -4,43 +4,43 @@
 
 import CoreGraphics
 
-extension CGRect {
+public extension CGRect {
 
     // MARK: - Coordinates
 
-    public var topY: Double {
+    var topY: Double {
         get { minY }
         set { origin.y = newValue }
     }
 
-    public var bottomY: Double {
+    var bottomY: Double {
         get { maxY }
         set { origin.y = newValue - height }
     }
 
-    public var centerX: Double {
+    var centerX: Double {
         get { midX }
         set { origin.x = newValue - (width / 2) }
     }
 
-    public var centerY: Double {
+    var centerY: Double {
         get { midY }
         set { origin.y = newValue - (height / 2) }
     }
 
-    public var leadingX: Double {
+    var leadingX: Double {
         get { minX }
         set { origin.x = newValue }
     }
 
-    public var trailingX: Double {
+    var trailingX: Double {
         get { maxX }
         set { origin.x = newValue - width }
     }
 
     // MARK: - Anchor Points
 
-    public var topLeading: CGPoint {
+    var topLeading: CGPoint {
         get { .init(x: leadingX, y: topY) }
         set {
             var rect = self
@@ -50,7 +50,7 @@ extension CGRect {
         }
     }
 
-    public var top: CGPoint {
+    var top: CGPoint {
         get { .init(x: centerX, y: topY) }
         set {
             var rect = self
@@ -60,7 +60,7 @@ extension CGRect {
         }
     }
 
-    public var topTrailing: CGPoint {
+    var topTrailing: CGPoint {
         get { .init(x: trailingX, y: topY) }
         set {
             var rect = self
@@ -70,7 +70,7 @@ extension CGRect {
         }
     }
 
-    public var leading: CGPoint {
+    var leading: CGPoint {
         get { .init(x: leadingX, y: centerY) }
         set {
             var rect = self
@@ -80,7 +80,7 @@ extension CGRect {
         }
     }
 
-    public var center: CGPoint {
+    var center: CGPoint {
         get { .init(x: centerX, y: centerY) }
         set {
             var rect = self
@@ -90,7 +90,7 @@ extension CGRect {
         }
     }
 
-    public var trailing: CGPoint {
+    var trailing: CGPoint {
         get { .init(x: trailingX, y: centerY) }
         set {
             var rect = self
@@ -100,7 +100,7 @@ extension CGRect {
         }
     }
 
-    public var bottomLeading: CGPoint {
+    var bottomLeading: CGPoint {
         get { .init(x: leadingX, y: bottomY) }
         set {
             var rect = self
@@ -110,7 +110,7 @@ extension CGRect {
         }
     }
 
-    public var bottom: CGPoint {
+    var bottom: CGPoint {
         get { .init(x: centerX, y: bottomY) }
         set {
             var rect = self
@@ -120,7 +120,7 @@ extension CGRect {
         }
     }
 
-    public var bottomTrailing: CGPoint {
+    var bottomTrailing: CGPoint {
         get { .init(x: trailingX, y: bottomY) }
         set {
             var rect = self
@@ -133,7 +133,7 @@ extension CGRect {
     // MARK: - Initializers
 
     /// A CGRect at the `.zero` origin with the specified `size`.
-    public init(size: CGSize) {
+    init(size: CGSize) {
         self = .init(origin: .zero, size: size)
     }
 }
