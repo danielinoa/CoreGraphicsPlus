@@ -136,4 +136,8 @@ public extension CGRect {
     init(size: CGSize) {
         self = .init(origin: .zero, size: size)
     }
+
+    init(origin: CGPoint, width: CGFloat, height: CGFloat) {
+        self.init(x: origin.x, y: origin.y, width: width, height: height)
+    }
 }
